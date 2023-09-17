@@ -1,3 +1,12 @@
-<div>
-  <p *ngIf="post.author">Autore del post: u/{{ post.author }}</p>
+<div class ="card" *ngIf="post">
+  <span >{{ post.title }} </span>
+  <span >Autore del post: u/{{ post.author }}</span>
+  <span >ID del post: {{ post.id }}</span>
+  <span >Creato in data {{ post.created }}</span>
+  <span *ngIf="post.thumbnail !== undefined && post.thumbnail !== null">
+    <img  class="card-img" src="{{ post.thumbnail }}">
+  </span>
+  <button>Salva nei preferiti</button>
+  <button (click)="removePost()">Rimuovi il post dall'elenco</button>
 </div>
+

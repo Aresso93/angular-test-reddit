@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Post } from 'src/app/model/post';
 import { RedditService } from 'src/app/services/reddit.service';
 @Component({
@@ -8,4 +8,10 @@ import { RedditService } from 'src/app/services/reddit.service';
 })
 export class PostCardComponent {
   @Input() post!: Post;
+  @Input() postArray?:Post
+  @Output() removed = new EventEmitter<Post>()
+
+  removePost(){
+    this.removed.emit(this.postArray);
+  }
 }

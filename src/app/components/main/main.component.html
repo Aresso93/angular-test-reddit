@@ -1,5 +1,5 @@
-<ul>
-  <li *ngFor="let post of postArray">
-    <app-post-card [post]="post"></app-post-card>
-  </li>
-</ul>
+
+  <div *ngFor="let post of postArray">
+    <app-post-card [post]="post" *ngFor="let post of postArray" [postArray]="post" (removed)="removePost($event)"></app-post-card>
+  </div>
+

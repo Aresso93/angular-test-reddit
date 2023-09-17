@@ -8,7 +8,7 @@ export class RedditService {
   constructor() {}
 
   getPosts(): Promise<Post[]> {
-    return fetch('https://www.reddit.com/r/aww/new.json')
+    return fetch('https://www.reddit.com/r/Eldenring/new.json')
       .then((resp) => resp.json())
       .then((redditObj) => redditObj.data)
       .then((data) => data.children)
