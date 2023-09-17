@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { PostCardComponent } from './components/post-card/post-card.component';
 import { MainComponent } from './components/main/main.component';
 import { HeaderComponent } from './components/header/header.component';
+import { FavComponent } from './components/fav/fav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostCardComponent,
     MainComponent,
-    HeaderComponent
+    HeaderComponent,
+    FavComponent
   ],
   imports: [
     BrowserModule,

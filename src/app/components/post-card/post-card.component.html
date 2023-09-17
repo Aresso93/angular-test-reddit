@@ -6,7 +6,7 @@
   <span *ngIf="post.thumbnail !== undefined && post.thumbnail !== null">
     <img  class="card-img" src="{{ post.thumbnail }}">
   </span>
-  <button>Salva nei preferiti</button>
+  <button (click)="addToFav()">Salva nei preferiti</button>
   <button (click)="removePost()">Rimuovi il post dall'elenco</button>
 </div>
 

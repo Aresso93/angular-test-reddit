@@ -9,13 +9,10 @@ import { RedditService } from 'src/app/services/reddit.service';
 })
 export class MainComponent {
   @Input() postArray: Post[] = [];
+  @Input() favArray: Post[] = [];
   constructor(reddit: RedditService) {
     reddit.getPosts()
     .then((posts) => (this.postArray = posts))
-    
-    
-    
-    
   }
 
   //rimuove un post dall'array di post
@@ -25,4 +22,12 @@ export class MainComponent {
     console.log('Post rimosso', this.postArray);
   }
 
+  //aggiunge un post a una lista di preferiti
+  addToFav(post: Post): void{
+    this.favArray.push(post)
+    console.log('Post aggiunto ai preferiti!');
+    console.log(this.favArray);
+    
+  }
+  
 }
