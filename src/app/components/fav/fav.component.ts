@@ -9,20 +9,15 @@ import { RedditService } from 'src/app/services/reddit.service';
 })
 export class FavComponent {
 
-  newPost: Post = {
-    title: '',
-    author: '',
-    id: -1,
-    thumbnail: '',
-    created: new Date,
-    imageUrl: ''
-  }
+ favArray: Post[] = []
+
 
   constructor(reddit: RedditService) {
-    reddit.getPosts()
-    .then((posts) => (console.log(posts)))
-  }
 
+
+
+
+}
 
 
 }
